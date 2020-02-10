@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact name="com.compare:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/com_compare_jar</output-path>
+    <root id="root">
+      <element id="archive" name="com.compare.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/project/compare.META-INF/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="com.dbmd-dev" />
+      </element>
+      <element id="library" level="project" name="sbt: com.github.scopt:scopt_2.11:4.0.0-RC2:jar" />
+    </root>
+  </artifact>
+</component>

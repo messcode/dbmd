@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="com.compare:jar" />
+      <artifact name="com.dbmd-dev:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4731ba4c-c8e1-46b3-a380-fae7b910ba09" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/matlab/experiments/realworld_data.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dbmd/ADMDBMD.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dbmd/AGDBMD.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dbmd/CEADBMD.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dbmd/DBMD.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dbmd/DBMDRunner.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/package.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/TestRunner.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/TestSuites.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/matlab/com/altmany-export_fig/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/matlab/com/ceaseAls.m" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/matlab/com/ceaseAls.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/matlab/experiments/Hc_eigenvalues.m" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/matlab/experiments/Hc_eigenvalues.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/competitors/CompareMethods.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/competitors/CompareMethods.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/dbmd/Config.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/dbmd/Config.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/dbmd/Mappers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/dbmd/Mappers.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/dbmd/SparkDBMD.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/dbmd/SparkDBMD.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/utils/AddNoise.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/utils/AddNoise.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/utils/MatOps.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/utils/MatOps.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/test.scala" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Package Object" />
+        <option value="Scala Object" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/src" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="JupyterTrust" id="23d3f601-913b-4726-badf-978185eab270" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1PdWSEh8T9HT0KjIaNBEfeG50aB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="com.dbmd-dev" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555469436017" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/run_shell" />
+      <recent name="$PROJECT_DIR$/src/main/scala/com" />
+      <recent name="$PROJECT_DIR$/src/main/scala/com/nmf/mal-matrix" />
+      <recent name="$PROJECT_DIR$/src/main/scala/com/competitors" />
+      <recent name="$PROJECT_DIR$/data/processed_data" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nmf" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/matlab" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="2" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.TestRunner">
+    <configuration name="SparkDBMD" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.dbmd.SparkDBMD" />
+      <module name="com.dbmd-dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dbmd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRunner" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="TestRunner" />
+      <module name="com.dbmd-dev" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="com.dbmd-dev-build" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestRunner" />
+        <item itemvalue="Application.SparkDBMD" />
+        <item itemvalue="Application.TestRunner" />
+        <item itemvalue="Application.SparkDBMD" />
+        <item itemvalue="Application.TestRunner" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="com.dbmd-dev" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="dbmd-dev [file:/D:/Project/dbmd-dev/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="com.dbmd-dev-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3157625890000" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="3988015974" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="1396028727" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4731ba4c-c8e1-46b3-a380-fae7b910ba09" name="Default Changelist" comment="" />
+      <created>1553223227872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553223227872</updated>
+      <workItem from="1553223231440" duration="37447000" />
+      <workItem from="1553409638465" duration="7459000" />
+      <workItem from="1555064218546" duration="1540000" />
+      <workItem from="1555294758036" duration="10191000" />
+      <workItem from="1555330117422" duration="8239000" />
+      <workItem from="1555382111316" duration="18250000" />
+      <workItem from="1555469561022" duration="1294000" />
+      <workItem from="1555471821177" duration="20932000" />
+      <workItem from="1555644403506" duration="23915000" />
+      <workItem from="1555997433792" duration="59000" />
+      <workItem from="1555997621034" duration="2520000" />
+      <workItem from="1556159392609" duration="647000" />
+      <workItem from="1556172909520" duration="48418000" />
+      <workItem from="1556848642101" duration="2811000" />
+      <workItem from="1556854177412" duration="11493000" />
+      <workItem from="1557193654042" duration="1722000" />
+      <workItem from="1557196366709" duration="19041000" />
+      <workItem from="1557294970625" duration="1787000" />
+      <workItem from="1557297149455" duration="1423000" />
+      <workItem from="1557366525703" duration="6920000" />
+      <workItem from="1557399658315" duration="13710000" />
+      <workItem from="1557831747403" duration="19431000" />
+      <workItem from="1557927495003" duration="45458000" />
+      <workItem from="1558769713903" duration="30578000" />
+      <workItem from="1558964217678" duration="10909000" />
+      <workItem from="1559091166316" duration="21313000" />
+      <workItem from="1559567922815" duration="26980000" />
+      <workItem from="1560058705040" duration="4640000" />
+      <workItem from="1560397619699" duration="4349000" />
+      <workItem from="1560751187281" duration="11211000" />
+      <workItem from="1561441791000" duration="4485000" />
+      <workItem from="1561726862106" duration="748000" />
+      <workItem from="1561727636832" duration="75320000" />
+      <workItem from="1562901034969" duration="231000" />
+      <workItem from="1562901301883" duration="19969000" />
+      <workItem from="1566204458696" duration="244000" />
+      <workItem from="1566204720560" duration="1249000" />
+      <workItem from="1566205989408" duration="3148000" />
+      <workItem from="1567424582035" duration="14777000" />
+      <workItem from="1567738200877" duration="1803000" />
+      <workItem from="1568536175688" duration="26742000" />
+      <workItem from="1575808783366" duration="10339000" />
+      <workItem from="1576572446273" duration="37436000" />
+      <workItem from="1577069460846" duration="16691000" />
+      <workItem from="1577104844125" duration="83960000" />
+      <workItem from="1577632000508" duration="953000" />
+      <workItem from="1577686872474" duration="21167000" />
+      <workItem from="1577881450175" duration="19281000" />
+      <workItem from="1578117340952" duration="18974000" />
+      <workItem from="1579225454698" duration="516000" />
+      <workItem from="1579225989692" duration="2466000" />
+      <workItem from="1579404947003" duration="9393000" />
+      <workItem from="1580102409315" duration="909000" />
+      <workItem from="1581295710053" duration="44000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+      <is-preview-enabled value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="range">
+                    <value>
+                      <list>
+                        <option value="HEAD..master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="2">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+        <option value="2" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="362" y="72" key="#Inspections" timestamp="1579417596012">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="362" y="72" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1579417596012" />
+    <state x="271" y="56" key="SettingsEditor" timestamp="1579417604252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="271" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579417604252" />
+    <state x="453" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1580102423593">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="453" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1580102423593" />
+    <state x="453" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579404951795" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1579417861969">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1579417861969" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/com_dbmd_dev$SparkDBMD.ic" NAME="SparkDBMD Coverage Results" MODIFIED="1566217869528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.dbmd.*</FILTER>
+    </SUITE>
+  </component>
+</project>

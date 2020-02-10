@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.clustering4ever:clustering4ever_2.11:0.9.4:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.clustering4ever/clustering4ever_2.11/jars/clustering4ever_2.11-0.9.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.clustering4ever/clustering4ever_2.11/srcs/clustering4ever_2.11-0.9.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
