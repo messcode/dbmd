@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact name="com.dbmd-dev:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/com_dbmd_dev_jar</output-path>
+    <root id="root">
+      <element id="archive" name="com.dbmd-dev.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/project/dbmd.META-INF/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="com.dbmd-dev" />
+      </element>
+      <element id="library" level="project" name="sbt: com.github.scopt:scopt_2.11:4.0.0-RC2:jar" />
+      <element id="library" level="project" name="sbt: com.typesafe.scala-logging:scala-logging_2.11:3.9.2:jar" />
+    </root>
+  </artifact>
+</component>

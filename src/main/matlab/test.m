@@ -1,0 +1,11 @@
+addpath(genpath('matlab'));
+m = 5; rank = 2; n = 100;
+Hc = drchrnd(ones(1, rank), n)';
+Wtrue = rand(m, rank);
+W0 = zeros(m, rank);
+Xc = Wtrue * Hc;
+lam  = 0.05;
+gradF = (W0 * HHt - Xc * Hc');
+nextWc = fista(Xc, Hc, W0, lam, 0.01, gradF);
+objval1 = sum(sum((Xc - W0 * Hc).^2)) * .5 + sum(sum(abs(W0))) * lam;
+objval2 = sum(sum((Xc - nextWc * Hc).^2)) * .5 + sum(sum(abs(nextWc))) * lam;
