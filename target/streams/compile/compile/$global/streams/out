@@ -1,0 +1,201 @@
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/FromFile.scala:79:14: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: (org.apache.spark.rdd.RDD[((Int, Int), breeze.linalg.DenseMatrix[Double])], AnyRef)[0m
+[0m[[0m[31merror[0m] [0m[0m        else if(dataset == "kdd")[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SimulationSplit.scala:48:70: value withSeed is not a member of object breeze.stats.distributions.RandBasis[0m
+[0m[[0m[31merror[0m] [0m[0m            val Double_h = DenseMatrix.rand(rank, range_h, RandBasis.withSeed(rdd_index.toInt).uniform)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SimulationSplit.scala:60:71: value withSeed is not a member of object breeze.stats.distributions.RandBasis[0m
+[0m[[0m[31merror[0m] [0m[0m            val e = DenseMatrix.rand(W.rows, range_h.toInt, RandBasis.withSeed(rdd_index.toInt).gaussian) *:* sigmas(rdd_index.toInt)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:11:25: object mllib is not a member of package org.apache.spark[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.mllib.clustering.KMeans[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:12:25: object mllib is not a member of package org.apache.spark[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.mllib.linalg.Vectors[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:13:8: object SparkSession is not a member of package org.apache.spark.sql[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.sql.SparkSession[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:38:54: not found: value Vectors[0m
+[0m[[0m[31merror[0m] [0m[0m            val sc_W = sc.parallelize(listW.map(x => Vectors.dense(x.toArray))).cache()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:39:28: not found: value KMeans[0m
+[0m[[0m[31merror[0m] [0m[0m            val clusters = KMeans.train(sc_W, rank, max_iter).clusterCenters[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:56:67: value *:* is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m                val Uw = DenseMatrix.rand(m, rank, Rand.gaussian) *:* 0.001[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:74:39: not found: value sqrt[0m
+[0m[[0m[31merror[0m] [0m[0m            val sqrt_mn = mL.map(l => sqrt(l._2.rows * l._2.cols)).first()[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:79:79: value /:/ is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m            var W = new_L.map(l => bro_rho.value * l._3 - l._5).reduce(_ + _) /:/ (rho * C)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:83:78: value sum is not a member of org.apache.spark.rdd.RDD[U][0m
+[0m[[0m[31merror[0m] [0m[0m            var r = new_L.map(l => norm((new_bro_W.value - l._3).flatten())).sum()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:94:79: value /:/ is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m                W = new_L.map(l => bro_rho.value * l._3 - l._5).reduce(_ + _) /:/ (rho * C)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:98:78: value sum is not a member of org.apache.spark.rdd.RDD[U][0m
+[0m[[0m[31merror[0m] [0m[0m                r = new_L.map(l => norm((new_bro_W.value - l._3).flatten())).sum()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:99:25: not found: value abs[0m
+[0m[[0m[31merror[0m] [0m[0m                del_r = abs(r - pri_r)[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:142:38: not found: value sqrt[0m
+[0m[[0m[31merror[0m] [0m[0m            val sigmas = mL.map(x => sqrt(x._6)).sum() / C[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:160:53: not found: value abs[0m
+[0m[[0m[31merror[0m] [0m[0m                    val M = labels.count { label => abs(label - 1.0) <= 1e-6 }.toDouble[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:161:53: not found: value abs[0m
+[0m[[0m[31merror[0m] [0m[0m                    val N = labels.count { label => abs(label - 0.0) <= 1e-6 }.toDouble[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:185:57: not found: value abs[0m
+[0m[[0m[31merror[0m] [0m[0m                        case ((score, label), index) => abs(label - 1.0) <= 1e-6[0m
+[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:234:22: diverging implicit expansion for type breeze.generic.UFunc.UImpl2[breeze.linalg.operators.OpMulMatrix.type,breeze.linalg.Vector[Double],breeze.linalg.Vector[Double],VR][0m
+[0m[[0m[31merror[0m] [0m[0mstarting with method collapseUred in object UFunc[0m
+[0m[[0m[31merror[0m] [0m[0m        sum(cweights * maxFMeasure)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:252:32: not found: value log2[0m
+[0m[[0m[31merror[0m] [0m[0m                MI += jointP * log2(jointP / (predictP * labelP))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:257:47: not found: value log2[0m
+[0m[[0m[31merror[0m] [0m[0m        val HC = -CWeight.map(x => x._2 / M * log2(x._2 / M)).sum[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:257:63: could not find implicit value for parameter num: Numeric[(Nothing, Nothing)][0m
+[0m[[0m[31merror[0m] [0m[0m        val HC = -CWeight.map(x => x._2 / M * log2(x._2 / M)).sum[0m
+[0m[[0m[31merror[0m] [0m[0m                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:258:47: not found: value log2[0m
+[0m[[0m[31merror[0m] [0m[0m        val HK = -KWeight.map(x => x._2 / M * log2(x._2 / M)).sum[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:258:63: could not find implicit value for parameter num: Numeric[(Nothing, Nothing)][0m
+[0m[[0m[31merror[0m] [0m[0m        val HK = -KWeight.map(x => x._2 / M * log2(x._2 / M)).sum[0m
+[0m[[0m[31merror[0m] [0m[0m                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:276:21: not found: value SparkSession[0m
+[0m[[0m[31merror[0m] [0m[0m        val spark = SparkSession.builder().master("local[4]").getOrCreate()[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:293:27: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Float[0m
+[0m[[0m[31merror[0m] [0m[0m            rho = args(4).toDouble[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:294:27: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Float[0m
+[0m[[0m[31merror[0m] [0m[0m            lam = args(5).toDouble[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:297:55: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m            val datas = new FromFile().preprocess(sc, C, filePath, rank, dataset)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:297:68: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m            val datas = new FromFile().preprocess(sc, C, filePath, rank, dataset)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:304:42: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m            val coeff = DenseVector.fill(rank, 1.5d)[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:308:27: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Float[0m
+[0m[[0m[31merror[0m] [0m[0m            rho = args(5).toDouble[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:309:27: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Float[0m
+[0m[[0m[31merror[0m] [0m[0m            lam = args(6).toDouble[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:311:43: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m            val sigmas = DenseVector.fill(C, 1d)[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:312:62: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m            val datas = new SimulationSplit().simulation(sc, C, rstep, rank, n, coeff, coh, sigmas, rho_sim)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:312:72: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m            val datas = new SimulationSplit().simulation(sc, C, rstep, rank, n, coeff, coh, sigmas, rho_sim)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:312:88: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m            val datas = new SimulationSplit().simulation(sc, C, rstep, rank, n, coeff, coh, sigmas, rho_sim)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:317:38: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Double[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m        val alpha = DenseVector.fill(rank, 0.1d)[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMD.scala:320:24: not found: type SparkDBMD2[0m
+[0m[[0m[31merror[0m] [0m[0m        val dbmd = new SparkDBMD2()[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMDCVlambda.scala:7:8: object SparkSession is not a member of package org.apache.spark.sql[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.sql.SparkSession[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMDCVlambda.scala:26:21: not found: value SparkSession[0m
+[0m[[0m[31merror[0m] [0m[0m        val spark = SparkSession.builder().getOrCreate()[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMDCVlambda.scala:44:24: not found: type SparkDBMD2[0m
+[0m[[0m[31merror[0m] [0m[0m        val dbmd = new SparkDBMD2()[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMDCVlambda.scala:77:43: not found: value mappers2[0m
+[0m[[0m[31merror[0m] [0m[0m            val currentL = initL.map(l => mappers2.map_update_Hc(l, bro_alpha.value))[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/SparkDBMDCVlambda.scala:78:40: value _4 is not a member of Nothing[0m
+[0m[[0m[31merror[0m] [0m[0m            val cv_Hc = currentL.map(_._4).cache()[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:13:99: value *:* is not a member of breeze.linalg.DenseVector[Double][0m
+[0m[[0m[31merror[0m] [0m[0m        F_a(0 until rank) := (Q * v(0 until rank)).toDenseVector - DenseVector.ones[Double](rank) *:* v(rank) - v(rank + 1 to -1) - b[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:15:48: value *:* is not a member of breeze.linalg.DenseVector[Double][0m
+[0m[[0m[31merror[0m] [0m[0m        F_a(rank + 1 to -1) := v(0 until rank) *:* v(rank + 1 to -1) - a[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:40:31: value /:/ is not a member of breeze.linalg.DenseVector[Double][0m
+[0m[[0m[31merror[0m] [0m[0m                val step = vk /:/ d[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:89:32: value /:/ is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m        val mat1 = (hc * hc.t) /:/ var2 + DenseMatrix.eye[Double](rank) *:* rho[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:89:73: value *:* is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m        val mat1 = (hc * hc.t) /:/ var2 + DenseMatrix.eye[Double](rank) *:* rho[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:92:96: value /:/ is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m        def cal_grad_f(mat: DenseMatrix[Double]): DenseMatrix[Double] = (mat * hc - xc) * hc.t /:/ var2 + rho * (mat - W)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:92:111: overloaded method value * with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (x: Double)Double <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (x: Float)Double <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (x: Long)Double <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (x: Int)Double <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (x: Char)Double <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (x: Short)Double <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (x: Byte)Double[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (breeze.linalg.DenseMatrix[Double])[0m
+[0m[[0m[31merror[0m] [0m[0m        def cal_grad_f(mat: DenseMatrix[Double]): DenseMatrix[Double] = (mat * hc - xc) * hc.t /:/ var2 + rho * (mat - W)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:93:69: value *:* is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m        def soft(B: DenseMatrix[Double], lamba: Double) = signum(B) *:* (abs(B) - lamba).mapValues(v => if (v > 0d) v else 0d)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:103:61: value *:* is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m                val viol: Double = norm((grad + signum(nWc) *:* elam).flatten())[0m
+[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:106:63: value /:/ is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m                val next_Wc: DenseMatrix[Double] = soft(Y-grad/:/L, elam)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chzhang/Work/Project/dbmd-dev/src/main/scala/dbmd/mappers.scala:108:47: value *:* is not a member of breeze.linalg.DenseMatrix[Double][0m
+[0m[[0m[31merror[0m] [0m[0m                Y = next_Wc + (next_Wc - nWc) *:* ((t - 1) / next_t)[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m55 errors found[0m

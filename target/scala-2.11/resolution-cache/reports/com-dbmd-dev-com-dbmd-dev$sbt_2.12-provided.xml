@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="com-dbmd-dev"
+		module="com-dbmd-dev$sbt_2.12"
+		revision="0.1"
+		conf="provided"
+		confs="compile, runtime, test, provided, optional"
+		date="20200209164854"/>
+	<dependencies>
+	</dependencies>
+</ivy-report>
