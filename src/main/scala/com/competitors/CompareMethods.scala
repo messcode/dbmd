@@ -9,6 +9,16 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
 import scopt.OParser
 
+case class CompareConfig(
+                            input: String = null,
+                            numClass: Int = 2,
+                            hasLabel: Boolean = false,
+                            delimiter: String = ",",
+                            node: Int = 1,
+                            seed: Long = 0,
+                            std: Double = -1
+                        )
+
 
 object CompareMethods {
 
@@ -61,10 +71,6 @@ object CompareMethods {
                   text("Delimiter of input file."),
                 opt[Int]('n', name = "node").required().action((x, c) => c.copy(node = x)).
                     text("Number of nodes to be used."),
-                opt[Unit](name = "kMeans").optional().action((_, c) => c.copy(runKMeans = true )).
-                  text("Run kMeans"),
-                opt[Unit](name = "NMF").optional().action((_, c) => c.copy(runNMF = true )).
-                  text("Run NMF"),
                 opt[Unit](name = "hasLabel").optional().action((_, c) => c.copy(hasLabel = true)).
                   text("Contains label"),
                 opt[Double](name = "std").optional.action((x, c) => c.copy(std = x)).
@@ -86,29 +92,22 @@ object CompareMethods {
 
                 }
                 val trueLabels = dataset._2
-                if (config.runKMeans) {
-                    val kMeansModel = new EvalKMeans(numClass = config.numClass)
-                    kMeansModel.evaluation(sc, X, trueLabels)
-                    kMeansModel.printMetrics()
+                print("====================KMeans==================\n")
+                val kMeansMoodel = new EvalKMeans(numClass = config.numClass)
+                kMeansMoodel.evaluation(sc, X, trueLabels)
+                kMeansMoodel.printMetrics()
+                print("====================NMF======================\n")
+                val nmfModel = new EvalNMF(numClass = config.numClass)
+                val numcols = X.first().size
+                def buildRowBlock(iter: Iterator[Vector]): Iterator[RowPartition] = {
+                    val vectorList = iter.toList
+                    val mat = DenseMatrix.zeros[Double](vectorList.length, numcols)
+                    vectorList.zipWithIndex.foreach(x => mat(x._2, ::) := DenseVector(x._1.toArray).t)
+                    Array(RowPartition(mat)).toIterator
                 }
-                if (config.runNMF) {
-                    val nmfModel = new EvalNMF(numClass = config.numClass)
-                    val numcols = X.first().size
-                    def buildRowBlock(iter: Iterator[Vector]): Iterator[RowPartition] = {
-                        val vectorList = iter.toList
-                        val mat = DenseMatrix.zeros[Double](vectorList.length, numcols)
-                        vectorList.zipWithIndex.foreach( x => mat(x._2, ::) := DenseVector(x._1.toArray).t)
-                        Array(RowPartition(mat)).toIterator
-                    }
-                    val rpmX = new RowPartitionedMatrix(X.mapPartitions(buildRowBlock, true))
-                    nmfModel.evaluation(sc, rpmX, trueLabels)
-                    nmfModel.printMetrics()
-//                    predLabels.mapPartitions(iter => Array(iter.size).iterator, true).foreach(println)
-//                    println("+++++++++++++++++++++")
-//                    trueLabels.mapPartitions(iter => Array(iter.size).iterator, true).foreach(println)
-//                    val xx = trueLabels.zip(predLabels)
-//                    xx.count()
-                }
+                val rpmX = new RowPartitionedMatrix(X.mapPartitions(buildRowBlock, true))
+                nmfModel.evaluation(sc, rpmX, trueLabels)
+                nmfModel.printMetrics()
             }
             case None =>
                 println("Input arguments are not valid")

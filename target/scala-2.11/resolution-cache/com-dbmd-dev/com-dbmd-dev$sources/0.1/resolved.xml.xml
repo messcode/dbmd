@@ -4,7 +4,7 @@
 		module="com-dbmd-dev$sources"
 		revision="0.1"
 		status="integration"
-		publication="20200209164857"
+		publication="20200809211243"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

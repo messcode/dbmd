@@ -35,6 +35,9 @@ class ExternalMetrics(trueLabels: RDD[Int], predLabels: RDD[Int]){
       format(jointCounts.cols, jointCounts.rows))
   }
 
+  val weightSeq = jointCounts(*, ::).map(x => x.map(transformCount(_)).toArray.toSeq).toArray.toSeq
+  val ret = KuhnMunkres.extractMatching(weightSeq)
+
   def transformCount(c:Int): Double = {
     if (c == 0){
       1d
@@ -44,32 +47,31 @@ class ExternalMetrics(trueLabels: RDD[Int], predLabels: RDD[Int]){
     }
   }
 
-  def normalizedMI(): Double = {
-    var MI = 0d
-    for ( i <- 0 until trueNum; j <- 0 until predNum) {
-      val count_xy = jointCounts(i, j)
-      if (count_xy > 0) {
-        val pxy = count_xy.toDouble / n
-        val px = (predCounts(j)_2).toDouble / n
-        val py = (trueCounts(i)_2).toDouble / n
-        MI += pxy * log2(pxy /  (px * py))
-      }
-    }
-    val entropyTrue = -trueCounts.map( x => x._2.toDouble / n * log2(x._2.toDouble / n)).sum
-    val entropyPred = -predCounts.map( x => x._2.toDouble / n * log2(x._2.toDouble / n)).sum
-    (2 * MI) / (entropyPred + entropyTrue)
-  }
-
   def accuracy(): Double = {
     // prepare cost matrix
-    val weightSeq = jointCounts(*, ::).map(x => x.map(transformCount(_)).toArray.toSeq).toArray.toSeq
-    val ret = KuhnMunkres.extractMatching(weightSeq)
     val acc = (ret._1).zipWithIndex.map( x => if (x._1 < 0) 0d else jointCounts(x._2, x._1)).sum / n
     acc
   }
 
   def fMeasure(): Double = {
-    -1d
+    val predLabels = sum(jointCounts(*, ::))
+    val trueLabels = sum(jointCounts(::, *))
+    val precision = (ret._1).zipWithIndex.map(x =>  {
+      if (x._1 < 0) 0d
+      else (jointCounts(x._2, x._1).toDouble / predLabels(x._2).toDouble)
+    })//.reduce(_ + _) / predLabels.size.toDouble
+    val recall = (ret._1).zipWithIndex.map(x => {
+      if (x._1 < 0) 0d
+      else (jointCounts(x._2, x._1).toDouble / trueLabels(x._1).toDouble)
+    })//.reduce(_ + _) / trueLabels.inner.size.toDouble
+    val f1 = (precision zip recall).collect{case x if (x._1 + x._2 > 0)  => 2 * x._1 * x._2 / (x._1 + x._2)
+    }
+    //val f1 = 2d * (precision * recall) / (precision + recall)
+    println("sum(f1) / f1.size=%f" format f1.reduce(_ + _) / f1.size.toDouble)
+    val p = precision.reduce(_ + _) / precision.size.toDouble
+    val r = recall.reduce(_ + _) / recall.size.toDouble
+    println("average and compute f1=%f" format 2 * (p * r) / (p + r))
+    f1.reduce(_ + _) / f1.size.toDouble
   }
 }
 
