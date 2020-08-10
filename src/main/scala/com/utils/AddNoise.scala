@@ -16,13 +16,14 @@ object  AddNoiseMat{
         noisyMat
     }
 
-    def addGaussianMixture(matTuple: MatTuple, stdVector: DenseVector[Double], mixtureProp: DenseVector[Int]): MatTuple = {
+    def addGaussianMixture(matTuple: MatTuple, stdVector: DenseVector[Double], mixtureProp: DenseVector[Int],
+                           numNodes:Int = 20): MatTuple = {
         val (indexTuple, mat) = matTuple
         assert(sum(mixtureProp) == 10)
         var noisyMat = mat
-        if (indexTuple._1 <= 2) {
+        if (indexTuple._1 <= 5) {
             noisyMat = addGaussian(mat, stdVector(0))
-        } else if (indexTuple._1 <= 5) {
+        } else if (indexTuple._1 <= 17) {
             noisyMat = addGaussian(mat, stdVector(1))
         } else {
             noisyMat = addGaussian(mat, stdVector(2))
@@ -45,7 +46,7 @@ object AddNoiseVector {
         var noisyVec = vec
         if (p <= 0.3) {
             noisyVec = addGaussian(vec, stdVector(0))
-        } else if (p <= 0.6) {
+        } else if (p <= 0.9) {
             noisyVec = addGaussian(vec, stdVector(1))
         } else {
             noisyVec = addGaussian(vec, stdVector(2))
@@ -58,11 +59,11 @@ object NoiseSituation {
     case class Situation(stdVector: DenseVector[Double], mixtureProp: DenseVector[Int])
     case class ComSituation(stdVector: DenseVector[Double], mixtureProp: DenseVector[Double])
     def getSituation(std: Double): Situation = {
-        Situation(DenseVector(1d, 1.5d, std), DenseVector(3, 3, 4))
+        Situation(DenseVector(0d, 0d, std), DenseVector(3, 6, 1))
     }
 
     def getComSituation(std: Double): ComSituation = {
-        ComSituation(DenseVector(0.1d, 1.5d, std), DenseVector(.3, .3, .4))
+        ComSituation(DenseVector(0d, 0d, std), DenseVector(.3, .3, .4))
     }
 }
 

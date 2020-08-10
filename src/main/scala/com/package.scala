@@ -1,10 +1,12 @@
-import breeze.linalg.DenseMatrix
+import breeze.linalg.{DenseMatrix, DenseVector}
+import com._
 import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.rdd.RDD
 
 package object com {
     type Mat = DenseMatrix[Double]
     type BcastMat = Broadcast[Mat]
+    type Vec = DenseVector[Double]
     /**
      * (index, Xc, Wc, Hc, Uc, vars, \delta Hc)
      */
