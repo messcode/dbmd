@@ -4,7 +4,7 @@
 		module="com-dbmd-dev$sbt_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20200209164854"
+		publication="20200809211235"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
