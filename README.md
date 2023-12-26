@@ -1,4 +1,4 @@
-# Distributed Bayesian Matrix Decomposition
+# Distributed Bayesian Matrix Decomposition for Big Data Mining and Clustering
 
 ## Introduction
 
@@ -10,13 +10,14 @@ This code is for "Distributed Bayesian Matrix Decomposition for Big Data Mining 
       
 # Citation
 ```
-@ARTICLE{Zhang2020,
-  author={C. {Zhang} and Y. {Yang} and W. {Zhou} and S. {Zhang}},
-  journal={IEEE Transactions on Knowledge and Data Engineering}, 
-  title={Distributed Bayesian Matrix Decomposition for Big Data Mining and Clustering}, 
-  year={2020},
-  volume={},
-  number={},
-  pages={1-1},
-  doi={10.1109/TKDE.2020.3029582}}
+@ARTICLE{zhang2022distributed,
+  title={Distributed Bayesian Matrix Decomposition for Big Data Mining and Clustering},
+  author={Zhang, Chihao and Yang, Yang and Zhou, Wei and Zhang, Shihua},
+  journal={IEEE Transactions on Knowledge \& Data Engineering},
+  volume={34},
+  number={08},
+  pages={3701--3713},
+  year={2022},
+  publisher={IEEE Computer Society}
+}
 ```
